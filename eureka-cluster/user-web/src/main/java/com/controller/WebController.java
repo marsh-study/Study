@@ -32,4 +32,13 @@ public class WebController {
         System.out.println("----getWebUserList----");
         return userService.getUserList();
     }
+
+    @RequestMapping("/save/{username}/{age}")
+    public int save(@PathVariable String username,@PathVariable int age){
+        User user=new User();
+        user.setUsername(username);
+        user.setAge(age);
+        System.out.println("user:"+user);
+        return userService.save(user);
+    }
 }

@@ -11,4 +11,6 @@ public interface UserService {
     public User getUserById(Integer id);
 
     public List<User> getUserList();
+
+    public int save(User user);
 }

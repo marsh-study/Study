@@ -34,4 +34,12 @@ public class UserServiceImpl implements UserService {
         return users;
     }
 
+    @Override
+    public int save(User user) {
+        String url="http://user-service/save";
+        int flag=restTemplate.postForObject(url,user, int.class);
+        return flag;
+    }
+
+
 }

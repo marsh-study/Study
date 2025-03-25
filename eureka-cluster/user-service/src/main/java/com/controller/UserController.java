@@ -1,8 +1,6 @@
 package com.controller;
 
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pojo.User;
 
 import java.util.ArrayList;
@@ -42,5 +40,11 @@ public class UserController {
         users.add(new User("L3",40,0));
         users.add(new User("L4",50,0));
         return users;
+    }
+
+    @RequestMapping("/save")
+    public int save(@RequestBody User user){
+        System.out.println("-----------save----------user:"+user);
+        return 1;
     }
 }
