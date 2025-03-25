@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import pojo.User;
 
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -17,4 +19,19 @@ public class UserServiceImpl implements UserService {
         User user=restTemplate.getForObject(url, User.class);
         return user;
     }
+
+    @Override
+    public User getUserById(Integer id) {
+        String url="http://user-service/getUserById/{id}";
+        User user=restTemplate.getForObject(url, User.class,id);
+        return user;
+    }
+
+    @Override
+    public List<User> getUserList() {
+        String url="http://user-service/getUserList";
+        List<User> users=restTemplate.getForObject(url, List.class);
+        return users;
+    }
+
 }
