@@ -1,0 +1,15 @@
+server:
+  port: 8803
+
+spring:
+  application:
+    name: user-service
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka/
+    fetch-registry: true
+    register-with-eureka: true

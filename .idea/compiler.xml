@@ -8,11 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="eureka-server7002" />
-        <module name="user-service" />
         <module name="eureka-server7003" />
+        <module name="user-service" />
         <module name="user-commons" />
         <module name="eureka-server" />
+        <module name="user-service8002" />
         <module name="user-web" />
+        <module name="user-service8003" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,6 +23,9 @@
       <module name="eureka-server (3)" target="1.8" />
       <module name="eureka_server" target="1.8" />
       <module name="parent" target="1.8" />
+      <module name="user-service (1)" target="1.8" />
+      <module name="user-service (2)" target="1.8" />
+      <module name="user-service (3)" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -34,6 +39,11 @@
       <module name="eureka_server" options="" />
       <module name="user-commons" options="-parameters" />
       <module name="user-service" options="-parameters" />
+      <module name="user-service (1)" options="-parameters" />
+      <module name="user-service (2)" options="-parameters" />
+      <module name="user-service (3)" options="-parameters" />
+      <module name="user-service8002" options="-parameters" />
+      <module name="user-service8003" options="-parameters" />
       <module name="user-web" options="-parameters" />
     </option>
   </component>

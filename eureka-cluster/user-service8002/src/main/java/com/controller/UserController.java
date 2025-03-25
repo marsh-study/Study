@@ -14,7 +14,8 @@ public class UserController {
         User user=new User();
         user.setUsername("张三");
         user.setAge(20);
-        user.setPort(8001);
+        user.setPort(8002);
+
         return user;
     }
 
