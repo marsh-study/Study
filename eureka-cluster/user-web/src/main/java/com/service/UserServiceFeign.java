@@ -15,14 +15,14 @@ import java.util.List;
 public interface UserServiceFeign {
 
     @RequestMapping("/getUser")
-    public User getUser();
+    User getUser();
 
     @RequestMapping("/getUserById/{id}")
-    public User getUserById(@PathVariable Integer id);
+    User getUserById(@PathVariable Integer id);
 
     @RequestMapping("/getUserList")
-    public List<User> getUserList();
+    List<User> getUserList();
 
     @RequestMapping("/save")
-    public int save(User user);
+    int save(User user);
 }
