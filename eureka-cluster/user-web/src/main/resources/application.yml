@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: user-web
+  cloud:
+    loadbalancer:
+      enabled: true
+      configurations:   # 配置负载均衡策略
+        - name: random
 
 eureka:
   instance:
@@ -13,3 +18,11 @@ eureka:
       defaultZone: http://eureka7001.com:7001/eureka/, http://eureka7002.com:7002/eureka/, http://eureka7003.com:7003/eureka/
     fetch-registry: true
     register-with-eureka: true
+feign:
+  hystrix:
+    enabled: true
+  circuitbreaker:
+    enabled: true
+
+
+
