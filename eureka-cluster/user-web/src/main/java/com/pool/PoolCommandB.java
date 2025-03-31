@@ -33,6 +33,9 @@ public class PoolCommandB extends HystrixCommand<List<User>> {
         this.userServiceFeign = userServiceFeign;
     }
 
+    private void setUserServiceFeign(UserServiceFeign userServiceFeign) {
+        this.userServiceFeign = userServiceFeign;
+    }
     protected List<User> run(){
         System.out.println("PoolCommandB thread id="+Thread.currentThread().getId());
 
